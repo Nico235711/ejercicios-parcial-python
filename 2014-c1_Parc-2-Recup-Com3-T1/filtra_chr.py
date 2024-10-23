@@ -6,4 +6,16 @@ necesario validar los datos.]
 Ejemplo: Dados    filtro = “1011011011”      y      texto = "este texto"
 la función debería devolver:   "eteteto" """
 
-def filtra_chr():
+def filtra_chr(cadenaBinaria, texto):
+    longitudCadenaBinaria = len(cadenaBinaria)
+    if (longitudCadenaBinaria != len(texto)):
+        return "Las longitudes no son iguales"
+    else:
+        nuevoTexto = ""
+        for posicion in range(longitudCadenaBinaria):
+            nuevoTexto += texto[posicion] if (cadenaBinaria[posicion] == "1") else ""
+        return nuevoTexto
+
+filtro = "1011011011"
+texto = "este texto"
+print(filtra_chr(filtro, texto) == "eteteto")
