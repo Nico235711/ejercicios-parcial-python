@@ -21,15 +21,17 @@ def cuantas_veces(cade, cadena):
             resultado += 1
     return resultado
 
-cade = "ente"
-cadena = "no se lamente la mente inteligente"
-texto = "vez" if (cuantas_veces(cade, cadena) == 1) else "veces"
-mensaje = f"{cade} no se encuentra en {cadena}" if (cuantas_veces(cade, cadena) == 0) else f"'{cade}' se encuentra exactamente {cuantas_veces(cade, cadena)} {texto} en '{cadena}'"
+# Solo se ejecuta si este archivo se ejecuta directamente
+if __name__ == "__main__":
+        cade = "ente"
+        cadena = "no se lamente la mente inteligente"
+        texto = "vez" if (cuantas_veces(cade, cadena) == 1) else "veces"
+        mensaje = f"{cade} no se encuentra en {cadena}" if (cuantas_veces(cade, cadena) == 0) else f"'{cade}' se encuentra exactamente {cuantas_veces(cade, cadena)} {texto} en '{cadena}'"
 
-print(mensaje)
+        print(mensaje)
 
-cade = "ante"
-cadena = "no se lamente la mente inteligente"
-mensaje = f"'{cade}' no se encuentra en '{cadena}'" if (cuantas_veces(cade, cadena) == 0) else f"'{cade}' se encuentra exactamente {cuantas_veces(cade, cadena)} {texto} en '{cadena}'"
+        cade = "ante"
+        cadena = "no se lamente la mente inteligente"
+        mensaje = f"'{cade}' no se encuentra en '{cadena}'" if (cuantas_veces(cade, cadena) == 0) else f"'{cade}' se encuentra exactamente {cuantas_veces(cade, cadena)} {texto} en '{cadena}'"
 
-print(mensaje)
+        print(mensaje)
