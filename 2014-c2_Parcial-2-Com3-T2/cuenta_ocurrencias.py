@@ -17,8 +17,10 @@ def cuenta_ocurrencias(cadena, tuplaCadena):
     for i in tuplaCadena:
         # print(i)
         cantidad = cuantas_veces(i, cadena)
-        print(cantidad)
+        tupla = (i, cantidad)
+        lista.append(tupla)
+    return lista
 
 cadena = "no se lamente la mente inteligente"
 tuplita = ("ente", "ante", "mente", "gente")
-cuenta_ocurrencias(cadena, tuplita)
+print(cuenta_ocurrencias(cadena, tuplita))
