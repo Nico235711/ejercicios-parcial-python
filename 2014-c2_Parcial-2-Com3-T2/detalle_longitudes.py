@@ -12,8 +12,10 @@ def detalle_longitudes(tupla):
         # print(i)
         longitud = len(i)
         if (longitud not in diccionarioLongitudes):
-            diccionarioLongitudes[longitud] = []
-            print(f"{i} {diccionarioLongitudes}")
+            diccionarioLongitudes[longitud] = [i]
+        else:
+            diccionarioLongitudes[longitud].append(i)
+    print(f"{diccionarioLongitudes}")
 
 tupla = ('no', 'se', 'lamente', 'la', 'mente', 'inteligente')
 detalle_longitudes(tupla)
